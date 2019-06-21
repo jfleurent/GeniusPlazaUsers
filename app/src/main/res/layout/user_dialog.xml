@@ -1,7 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="300dp"
+        android:padding="8dp"
+        android:layout_height="wrap_content">
 
-</LinearLayout>
+    <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_title"
+            android:textSize="28sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/name_text_layout"
+            app:layout_constraintVertical_chainStyle="spread"
+    />
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_text_layout"
+            style="@style/DialogTheme.EditText"
+            android:hint="@string/name_hint"
+            app:hintEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/title_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/job_text_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+    >
+    <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/job_text_layout"
+            style="@style/DialogTheme.EditText"
+            android:hint="@string/job_hint"
+            app:hintEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/name_text_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/cancel_button"
+            app:layout_constraintEnd_toEndOf="parent"
+    >
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/job_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/ok_button"
+            style="@style/DialogTheme.Button"
+            android:text="@android:string/ok"
+            app:layout_constraintTop_toTopOf="@id/cancel_button"
+            app:layout_constraintEnd_toStartOf="@id/cancel_button"
+            app:layout_constraintBottom_toBottomOf="@+id/cancel_button"
+        />
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_button"
+            style="@style/DialogTheme.Button"
+            android:text="@android:string/cancel"
+            app:layout_constraintTop_toBottomOf="@id/job_text_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
