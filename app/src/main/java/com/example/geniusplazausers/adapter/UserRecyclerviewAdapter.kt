@@ -1,13 +1,13 @@
-package com.example.geniusplazausers
+package com.example.geniusplazausers.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
+import com.example.geniusplazausers.BR
+import com.example.geniusplazausers.R
+import com.example.geniusplazausers.models.User
 
 class UserRecyclerviewAdapter(private val users: List<User>?): RecyclerView.Adapter<UserRecyclerviewAdapter.UserViewHolder>(){
 
