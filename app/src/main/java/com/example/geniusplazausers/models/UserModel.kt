@@ -1,8 +1,9 @@
-package com.example.geniusplazausers
+package com.example.geniusplazausers.models
 
 import android.widget.ImageView
 import com.google.gson.annotations.SerializedName
 import androidx.databinding.BindingAdapter
+import com.example.geniusplazausers.R
 import com.squareup.picasso.Picasso
 import jp.wasabeef.picasso.transformations.CropCircleTransformation
 
