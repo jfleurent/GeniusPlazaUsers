@@ -1,18 +1,17 @@
-package com.example.geniusplazausers
+package com.example.geniusplazausers.ui
 
 import android.app.Dialog
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.geniusplazausers.networking.NetworkingService
+import com.example.geniusplazausers.R
+import com.example.geniusplazausers.models.User
+import com.example.geniusplazausers.adapter.UserRecyclerviewAdapter
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 
@@ -53,7 +52,7 @@ class MainActivity : AppCompatActivity() {
     fun CoroutineScope.postUser(name: String, job: String){
         launch {
            Toast.makeText(this@MainActivity
-               ,NetworkingService.getUserApi().addUser(name, job).toString(),
+               , NetworkingService.getUserApi().addUser(name, job).toString(),
                Toast.LENGTH_LONG )
                .show()
         }
