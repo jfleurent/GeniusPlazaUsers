@@ -2,7 +2,6 @@ package com.example.geniusplazausers
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 
 object NetworkingService {
     private lateinit var BASE_URL : String
