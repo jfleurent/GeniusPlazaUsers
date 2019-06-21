@@ -1,5 +1,7 @@
-package com.example.geniusplazausers
+package com.example.geniusplazausers.networking
 
+import com.example.geniusplazausers.models.UserPagedResult
+import com.example.geniusplazausers.models.UserPostResponse
 import retrofit2.http.*
 
 interface UserApi{
